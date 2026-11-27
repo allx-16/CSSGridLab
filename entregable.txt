@@ -1,0 +1,64 @@
+LABORATORIO CSS BÁSICO - ENTREGABLE
+
+PASO 1
+
+2. ¿Qué elementos se ven afectados por cada selector?
+
+   nav a {...}
+   Es un selector descendiente: afecta a todos los enlaces <a> que están
+   DENTRO de un <nav>. En este index.html son los cinco enlaces de la barra
+   (los cuatro íconos y "A la tiendita en avión"). Un <a> fuera del nav no
+   se vería afectado.
+
+   nav , a {...}
+   La coma agrupa selectores: afecta a TODOS los <nav> y a TODOS los <a> de
+   la página, estén o no dentro del nav. Las reglas se aplican a cada uno por
+   separado (al nav completo y a cada enlace).
+
+   .l, .o, .v, .e, .r {...}
+   También es una lista de selectores separados por comas: afecta a cada
+   elemento que tenga cualquiera de esas clases. Aquí son los cinco <div> de
+   la cuadrícula (L, O, V, E, R), que comparten color de letra, sombra,
+   alineación y tamaño de fuente.
+
+4. ¿Qué hace la propiedad filter?
+
+   filter aplica efectos gráficos a un elemento (normalmente imágenes) antes
+   de dibujarlo, sin modificar el archivo original. En el laboratorio,
+   brightness(0) vuelve el ícono completamente negro y después invert(1)
+   invierte los colores, así que los íconos se ven blancos y combinan con la
+   barra. Al comentar esas líneas, los íconos se ven con sus colores
+   originales; al descomentarlas vuelven a verse blancos.
+
+   Otras funciones de filter: blur() (desenfoque), contrast(), grayscale()
+   (escala de grises), sepia(), saturate(), hue-rotate() (gira los tonos),
+   opacity() y drop-shadow() (sombra que sigue el contorno de la imagen).
+   Para fotos usaría grayscale() o sepia() para un estilo antiguo,
+   contrast() y saturate() para que los colores resalten, y blur() para
+   difuminar fondos o imágenes detrás de un texto.
+
+PASO 2
+
+1. El nav ahora usa un degradado de amarillo a naranja con las variables de
+   :root: linear-gradient(var(--taylor-yellow), var(--taylor-orange)).
+2. Paleta propia con prefijo --allx: azul, amarillo, rojo, morado, naranja
+   y verde. Se usa en el paso 5.
+
+PASO 3
+
+grid-template-columns define cuántas columnas tiene la cuadrícula y su
+tamaño; grid-column y grid-row indican en qué columna y fila se coloca cada
+elemento (con "inicio / fin" puede abarcar varias). Para una sola columna se
+usa grid-template-columns: 1fr y todas las letras en grid-column: 1; el orden
+lo da grid-row. Commit "REVOL": R, E, V, O, L de arriba hacia abajo.
+
+PASO 4
+
+Todas las letras en grid-row: 1 y cada una en su columna (1 a 5). Commit
+"LOVER": L, O, V, E, R de izquierda a derecha.
+
+PASO 5
+
+Diagonal: cada letra en la misma columna y fila (1/1, 2/2, 3/3, 4/4, 5/5),
+ordenadas como R, E, V, O, L, y con los colores de la paleta --allx.
+Commit "Diagonal".
